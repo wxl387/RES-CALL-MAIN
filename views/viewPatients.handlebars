@@ -1,47 +1,56 @@
-
-    <br>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="panel panel-default" id="patient-selection-panel">
-                <div class="panel-heading">
-                    <h1 class="panel-title">Current patients</h1>
-                </div>
-                <div class="panel-body">
-                    {{#each patient}} 
-                        <button class="btn patient-button btn-default btn-block" data-toggle="modal" data-target=".bs-example-modal-sm2" id="{{this.id}}">
-                            {{this.patient_name}}
-                        </button>
-                        <hr>
-                    {{/each}}
-                </div>
+<br>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default" id="patient-selection-panel">
+            <div class="panel-heading">
+                <h1 class="panel-title">Current patients</h1>
+            </div>
+            <div class="panel-body">
+                {{#each patient}} 
+                    <button class="btn patient-button btn-default btn-block" data-toggle="modal" data-target=".bs-example-modal-sm2" id="{{this.id}}">
+                        {{this.patient_name}}
+                    </button>
+                    <hr>
+                {{/each}}
             </div>
         </div>
     </div>
-
+</div>
 
     
-
 <div class="modal fade bs-example-modal-sm2">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Patient Information</h4>
-      </div>
-      <div class="modal-body">
-                    <strong>PATIENT NAME</strong>
-                    <input type="text" class="form-control no-border" id="table-name" value=""><br>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Patient Information</h4>
+        </div>    
+    
+        <div class="modal-body" id="patient-info-column">
+            
+            <strong>PATIENT NAME</strong>
+            <input type="text" class="form-control no-border" id="table-name" value=""><br>
 
-                    <span>MRN</span><br>
-                    <input type="text" class="form-control no-border" id="table-MRN" value=""><br>          
-                    
-                    <span>HPI</span>
-                    <input type="text" class="form-control no-border" id="table-HPI" value=""><br>
-      </div>
-      <div class="modal-footer">
-        <div id="update-patient-button-div"></div>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
+            <span>MRN</span><br>
+            <input type="text" class="form-control no-border" id="table-MRN" value=""><br>          
+            
+            <span>Injury</span>
+            <input type="text" class="form-control no-border" id="table-injury" value=""><br>
+            
+            <span>HPI</span>
+            <input type="text" class="form-control no-border" id="table-HPI" value=""><br>
+            
+            <span>Plan</span>
+            <span id="table-plan"></span>
+            
+            <br>
+            <span id="add-update-task-span"></span>
+        </div>
+
+        <div class="modal-footer">
+            <div id="update-patient-button-div"></div>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
