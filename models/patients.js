@@ -9,6 +9,12 @@ var patients = {
       });
     },
 
+    getPlan: function(injury, cb) {
+      orm.getPlan("scenarios", injury, function(res) {
+        cb(res);
+      });
+    },
+
     getAllInjuries: function(cb) {
       orm.getAllInjuries("scenarios", function(res) {
         cb(res);
@@ -31,6 +37,12 @@ var patients = {
       orm.updatePatient("patients", patientInfo, function(res) {
         cb(res);
       });
+    },
+
+    updatePlan: function(updatedPlan, cb) {
+      orm.updatePlan("patients", updatedPlan, function(res) {
+        cb(res);
+      })
     },
 
     deletePatient: function(PID, cb) {

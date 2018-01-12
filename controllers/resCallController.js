@@ -18,6 +18,17 @@ router.get("/addPatient", function(req, res) {
   });
 });
 
+router.get("/getPlan/:injury", function(req, res) {
+   resCallDB.getPlan(req.params.injury, function(data) {
+
+    var plan = {
+      plan: data
+    }
+
+    res.send(plan);
+   });
+});
+
 router.get("/viewPatients", function(req, res) {    
   resCallDB.viewPatients(function(data) {
 
@@ -55,10 +66,15 @@ router.post("/viewPatients/updatePatient", function(req, res) {
   });
 });
 
+router.post("/updatePlan", function(req, res) {
+
+  resCallDB.updatePlan(req.body, function() {
+    res.redirect("/");
+  });
+});
+
 router.post("/viewPatients/deletePatient", function(req, res) {
   
-  console.log("I'm at router")
-  console.log(req.body)
   resCallDB.deletePatient(req.body, function() {
     res.redirect("/");
   });

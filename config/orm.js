@@ -11,7 +11,7 @@ var orm = {
         var columnValues = [];
         
         for (x in patientInfo) {
-            columnValues.push('"'+patientInfo[x]+'"')
+            columnValues.push("'"+patientInfo[x]+"'")
         };
 
         queryString += (" ("+columnNames.toString()+") ");
@@ -36,6 +36,20 @@ var orm = {
                 injuries.push(result[i])
             };
             cb(injuries)
+        });
+    },
+
+    getPlan: function(table, injury, cb) {
+        var queryString = "SELECT * FROM " + table + " WHERE body_part_specific=" +"'"+injury+"';";
+        connection.query(queryString, function(err, result) {
+            if (err) {
+                throw err;
+            };
+            var plan = [];
+            for (var i = 0; i < result.length; i++) {
+                plan.push(result[i])
+            };
+            cb(plan)
         });
     },
 
@@ -73,7 +87,7 @@ var orm = {
         var PID = updatedPatientInfo["id"]
         columnValues = []
         for (x in updatedPatientInfo) {
-            columnValues.push(x+'='+'"'+updatedPatientInfo[x]+'"')
+            columnValues.push(x+'='+"'"+updatedPatientInfo[x]+"'")
         };
 
         queryString += (" SET "+columnValues.toString());
@@ -85,6 +99,26 @@ var orm = {
             };
             cb(result);
         });
+    },
+
+    updatePlan: function(table, updatedPlan, cb) {
+        var queryString = "UPDATE " + table;
+
+        var PID = updatedPlan["id"]
+        columnValues = []
+        for (x in updatedPlan) {
+            columnValues.push(x+'='+"'"+updatedPlan[x]+"'")
+        };
+
+        queryString += (" SET "+columnValues.toString());
+        queryString += (" WHERE id = "+'"'+PID+'"');
+
+        connection.query(queryString, function(err, result) {
+            if (err) {
+                throw err;
+            };
+            cb(result);
+        }); 
     },
 
     deletePatient: function(table, PID, cb) {
@@ -100,5 +134,4 @@ var orm = {
     },
 };
 
-// Export the orm object for the model (cat.js).
 module.exports = orm;
