@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Cairo" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>ResCall</title>
+</head>
+<header>
+    <div class="headerSpacer"></div>
+    <div class="headerSpacer2"></div>
+</header>
+
+<body>
+    <div class="container">
+        <div class="backgroundImage">
+            <center><img src="http://i67.tinypic.com/2dhz3p4.png"></center>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-4">
+                <center>
+                    <a href="/addPatient">
+                        <button id="add-patient" class="btn btn-default">
+                            <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>Add Patient
+                        </button>
+                    </a>
+                </center>
+            </div>
+            <div class="col-md-4">
+                <center>
+                    <a href="/viewPatients">
+                        <button id="view-patients" class="btn btn-default">
+                            <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>View Patients
+                        </button>
+                    </a>
+                </center>
+            </div>
+            <div class="col-md-2">
+                <center>
+                    <a href="/">
+                        <button type="button" class="btn btn-default" aria-label="Left Align" id="home">
+                            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home
+                        </button>
+                    </a>
+                </center>
+            </div>
+            <div class="col-md-2">
+                <center>
+                    <a href="/">
+                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>Logout
+                        </button>
+                    </a>
+                </center>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                {{{ body }}}
+            </div>
+            <br><div class="col-md-4">
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading" id="panel-emergency"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Emergency Room Admissions</div>
+                    <!-- Table -->
+                    <table class="table">
+                        <tr>
+                            <th>Time In</th>
+                            <th>First</th>
+                            <th>Last</th>
+                            <th>Age</th>
+                            <th>Injury</th>
+                        </tr>
+                        <tr>
+                            <td>5:45p</td>
+                            <td>Mickey</td>
+                            <td>Mouse</td>
+                            <td>45M</td>
+                            <td>Broken Arm</td>
+                        </tr>
+                        <tr>
+                            <td>6:03p</td>
+                            <td>Betty</td>
+                            <td>White</td>
+                            <td>94F</td>
+                            <td>Cardiac Arrest</td>
+                        </tr>
+                        <tr>
+                            <td>6:38p</td>
+                            <td>Tom</td>
+                            <td>Smith</td>
+                            <td>19M</td>
+                            <td>Finger Laceration</td>
+                        </tr>
+                        <tr>
+                            <td>7:11p</td>
+                            <td>Lisa</td>
+                            <td>Simpson</td>
+                            <td>12F</td>
+                            <td>Leg Pain</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading" id="panel-ambulance"><span class="glyphicon glyphicon-road" aria-hidden="true"></span>Ambulance En Route</div>
+                    <!-- Table -->
+                    <table class="table">
+                        <tr>
+                            <th>City</th>
+                            <th>HPI</th>
+                            <th>Injury</th>
+                            <th>Details</th>
+                        </tr>
+                        <tr>
+                            <td>Cleveland</td>
+                            <td>9YO M</td>
+                            <td>Head Trauma</td>
+                            <td>Fell off a swingset, landed on head</td>
+                        </tr>
+                        <tr>
+                            <td>Shaker Heights</td>
+                            <td>52YO F</td>
+                            <td>Chest Pains</td>
+                            <td>Complaining of chest pain after working out</td>
+                        </tr>
+                        <tr>
+                            <td>Cleveland Hts.</td>
+                            <td>27YO F</td>
+                            <td>Unconsious</td>
+                            <td>Involved in a car accident</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="footerCopyright">
+                <center>Copyright © 2017 Res+Call • CWRU Coding Bootcamp</center>
+            </div>
+            <div class="footerNames">
+                <center>Phil Tesar - Wenbiao Li - Chang-Yeon Kim - Bret Schneider </center>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/javascript/javascript.js"></script>
+</body>
+
+</html>

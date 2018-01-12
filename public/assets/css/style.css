@@ -1,0 +1,95 @@
+body {
+	font-family: 'Cairo', sans-serif;
+	background: url(../images/gray.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.no-border {
+    border: 0;
+    box-shadow: none; /* You may want to include this as bootstrap applies these styles too */
+}
+
+img {
+	max-width: 300px;
+}
+
+.panel-default {
+	font-family: 'Cairo', sans-serif;
+}
+
+.headerSpacer {
+	background-color: #da291c;
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-family: 'Cairo', sans-serif;
+}
+
+.headerSpacer2 {
+	background-color: #8c92ac;
+	max-height: 10px;
+	padding-top: 10px;
+}
+
+.glyphicon {
+  margin-right: 8px;
+}
+
+.btn.btn-icon .glyphicon {
+  margin-right: 0;
+}
+
+.btn-default {
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.btn-default {
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.footer {
+	background-color: #8c92ac;
+	color: #FFFFFF;
+	font-family: 'Cairo', sans-serif;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.footerCopyright {
+	font-size: 18px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.footerNames {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.modal-footer .btn+.btn {
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #e5e5e5;
+}
+
+#panel-emergency {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+#panel-ambulance {
+	background-color: #da291c;;
+	color: #FFFFFF;
+}
